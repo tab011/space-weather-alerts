@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BKRLab Space Weather Alerts</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0b1220;
+      color: #c8d6e8;
+      line-height: 1.6;
+    }
+    header {
+      background: #111a2b;
+      border-bottom: 1px solid #1e2d45;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    header h1 { color: #45c4ff; font-size: 1.4rem; }
+    header span { font-size: 1.6rem; }
+    main { max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h2 { color: #45c4ff; margin-bottom: .75rem; font-size: 1.15rem; }
+    p { margin-bottom: 1rem; }
+    .card {
+      background: #111a2b;
+      border: 1px solid #1e2d45;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .subscribe-box {
+      background: #0d2340;
+      border: 1px solid #45c4ff44;
+      border-radius: 8px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .subscribe-box .number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #45c4ff;
+      letter-spacing: .05em;
+    }
+    .subscribe-box .instruction {
+      margin-top: .5rem;
+      font-size: 1rem;
+      color: #8ba8c8;
+    }
+    .alert-types { list-style: none; }
+    .alert-types li {
+      padding: .5rem 0;
+      border-bottom: 1px solid #1e2d45;
+      display: flex;
+      gap: .75rem;
+    }
+    .alert-types li:last-child { border-bottom: none; }
+    .badge {
+      display: inline-block;
+      padding: .2rem .6rem;
+      border-radius: 4px;
+      font-size: .75rem;
+      font-weight: 600;
+      white-space: nowrap;
+      align-self: flex-start;
+      margin-top: .1rem;
+    }
+    .badge-red   { background: #4a1a1a; color: #ff7b7b; }
+    .badge-green { background: #1a3a2a; color: #7bff9b; }
+    .badge-blue  { background: #1a2a4a; color: #7bcfff; }
+    .unsubscribe-link {
+      display: inline-block;
+      margin-top: .75rem;
+      color: #45c4ff;
+      text-decoration: none;
+      border-bottom: 1px solid #45c4ff55;
+    }
+    .unsubscribe-link:hover { border-bottom-color: #45c4ff; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #4a6080;
+      font-size: .85rem;
+      border-top: 1px solid #1e2d45;
+    }
+    footer a { color: #6a8fb0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <span>🌌</span>
+  <h1>BKRLab Space Weather Alerts</h1>
+</header>
+
+<main>
+
+  <div class="subscribe-box">
+    <div style="color:#8ba8c8; margin-bottom:.5rem; font-size:.9rem; text-transform:uppercase; letter-spacing:.08em;">Subscribe via SMS</div>
+    <div class="number">Text START to</div>
+    <div class="number">+1 (978) 483-0684</div>
+    <div class="instruction">You'll receive a confirmation. Message and data rates may apply.</div>
+  </div>
+
+  <div class="card">
+    <h2>What Is This?</h2>
+    <p>BKRLab Space Weather Alerts sends SMS notifications when the National Oceanic and Atmospheric Administration (NOAA) Space Weather Prediction Center issues significant geomagnetic, solar radiation, or radio blackout alerts.</p>
+    <p>Alerts are sourced directly from NOAA's public data feeds. Messages are sent only when real events meet threshold criteria — there are no promotional messages and no third-party data sharing.</p>
+  </div>
+
+  <div class="card">
+    <h2>Alert Types</h2>
+    <ul class="alert-types">
+      <li>
+        <span class="badge badge-red">Equipment</span>
+        <span>Satellite drag, GPS accuracy degradation, HF radio blackouts, power grid impacts (G2+ and S2+ events)</span>
+      </li>
+      <li>
+        <span class="badge badge-green">Wildlife</span>
+        <span>Geomagnetic disruption affecting migratory bird navigation, cetacean magnetoreception, and sea turtle homing (Kp ≥ 5)</span>
+      </li>
+      <li>
+        <span class="badge badge-blue">HSP Advisory</span>
+        <span>Epidemiological correlation advisories for highly sensitive persons — sudden storm commencements and sustained geomagnetic elevation (Kp ≥ 5)</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>How to Subscribe</h2>
+    <p>Text <strong>START</strong> to <strong>+1 (978) 483-0684</strong> from your mobile phone. You'll receive a one-time confirmation message. After that, you'll receive alerts only when significant space weather events occur.</p>
+  </div>
+
+  <div class="card">
+    <h2>How to Unsubscribe</h2>
+    <p>Text <strong>STOP</strong> to <strong>+1 (978) 483-0684</strong> at any time — you'll be removed immediately and automatically.</p>
+    <p>You can also <a class="unsubscribe-link" href="unsubscribe.html">use the web form to unsubscribe</a> if you prefer not to send a text.</p>
+  </div>
+
+  <div class="card">
+    <h2>Message Frequency &amp; Cost</h2>
+    <p>Messages are sent only when significant space weather events occur. During quiet conditions this may be zero messages per week; during active periods it may be several per day. Standard message and data rates may apply depending on your carrier.</p>
+  </div>
+
+</main>
+
+<footer>
+  BKRLab · Todd Baker · Lowell, MA ·
+  <a href="privacy.html">Privacy Policy</a> ·
+  <a href="unsubscribe.html">Unsubscribe</a>
+</footer>
+
+</body>
+</html>
